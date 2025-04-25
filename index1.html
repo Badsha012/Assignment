@@ -3,45 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nested Menu Challenge</title>
-    <link rel="stylesheet" href="styles1.css">
+    <title>User Profile Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="main-menu">
-            <li><a href="#">Home</a></li>
-            <li>
-                <a href="#">Services</a>
-                <ul class="submenu">
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">SEO</a></li>
-                    <li>
-                        <a href="#">Marketing</a>
-                        <ul class="submenu">
-                            <li><a href="https://web.facebook.com/md.badsha.sheikh.423531">Facebook</a></li>
-                            <li><a href="">Email Marketing</a></li>
-                            <li><a href="basshasheikh2022@gmai.com">Content Marketing</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="">Products</a>
-                <ul class="submenu">
-                    <li><a href="#">Gadgets</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li>
-                        <a href="#">Clothing</a>
-                        <ul class="submenu">
-                            <li><a href="#">Men</a></li>
-                            <li><a href="#">Women</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="dashboard">
+        <header class="header">
+            <div class="profile-info">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+                <div class="user-details">
+                    <h1>John Doe</h1>
+                    <p>Email: john.doe@example.com</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <nav class="tabs">
+                <button class="tab active" onclick="showTab('info')">Info</button>
+                <button class="tab" onclick="showTab('stats')">Stats</button>
+                <button class="tab" onclick="showTab('activity')">Activity</button>
+                <button class="tab" onclick="showTab('settings')">Settings</button>
+            </nav>
+
+            <div class="tab-content" id="info">
+                <h2>User Information</h2>
+                <p>Here you can see user information.</p>
+            </div>
+            <div class="tab-content" id="stats" style="display: none;">
+                <h2>User Stats</h2>
+                <div class="stats">
+                    <div class="stat-box">Posts: 120</div>
+                    <div class="stat-box">Followers: 300</div>
+                    <div class="stat-box">Following: 180</div>
+                </div>
+            </div>
+            <div class="tab-content" id="activity" style="display: none;">
+                <h2>Activity Feed</h2>
+                <div class="activity-feed">
+                    <p>Activity 1: Liked a post</p>
+                    <p>Activity 2: Followed a user</p>
+                    <p>Activity 3: Commented on a post</p>
+                    <p>Activity 4: Shared a post</p>
+                    <p>Activity 5: Updated profile picture</p>
+                </div>
+            </div>
+            <div class="tab-content" id="settings" style="display: none;">
+                <h2>Settings</h2>
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
